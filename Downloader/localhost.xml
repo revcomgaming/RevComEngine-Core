@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<url></url>
+	<database>
+		<type>mysql</type>
+		<server></server>
+		<name></name>
+		<username></username>
+		<password></password>
+		<connection_warn>true</connection_warn>
+		<warn_interval_mins>1</warn_interval_mins>
+		<credential_remove>true</credential_remove>
+	</database>
+	<email></email>
+	<use_ssl></use_ssl>
+	<store_app_info>false</store_app_info>
+	<server_file_folder_path></server_file_folder_path>
+	<server_file_types>
+		AUDIO_BGM,AUDIO_BGS,AUDIO_ME,AUDIO_SE,GRAPHICS_ANIMATIONS,GRAPHICS_BATTLEBACKS1,GRAPHICS_BATTLEBACKS2,
+        GRAPHICS_BATTLERS,GRAPHICS_CHARACTERS,GRAPHICS_FACES,GRAPHICS_PARALLAXES,GRAPHICS_PICTURES,GRAPHICS_SYSTEM,
+        GRAPHICS_TILESETS,GRAPHICS_TITLES1,GRAPHICS_TITLES2,DATA
+    </server_file_types>
+</configuration>
