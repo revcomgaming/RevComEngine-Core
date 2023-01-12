@@ -1,0 +1,32 @@
+name: Main Build
+run-name: Main Build
+on: [push, workflow_dispatch]
+jobs:
+  main-build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: apt-get -y install zip unzip 
+      - run: gh release download 2.0 -R revcomgaming/revcommsuite
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - run: unzip -B RevCommSuite.zip
+      - run: mkdir './Downloader/Processor'
+      - run: mv './LICENSE' './Downloader/LICENSE'
+      - run: mv './LICENSE~' './LICENSE'
+      - run: mv './Web' './Downloader'
+      - run: mv './Client' './Downloader'
+      - run: mv './Server' './Downloader'
+      - run: mv './Processor/RevCommProcessor.rb' './Downloader/Processor/RevCommProcessor.rb'
+      - run: mv './RevCommConfig.xml' './Downloader/Server/RevCommConfig.xml'
+      - run: mv './Downloader/rce_down.php' './Downloader/Web/rce_down.php'
+      - run: mv './Downloader/redirect.xml' './Downloader/Web/redirect.xml'
+      - name: Create artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: RevComEngine_Core
+          path: |
+            RevComEngine_Core.rb 
+            rce_release_20_setup.sql 
+            Downloader
+            LICENSE
+            README.md
