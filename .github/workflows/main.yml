@@ -4,6 +4,8 @@ on: [push, workflow_dispatch]
 jobs:
   main-build:
     runs-on: ubuntu-latest
+    env: 
+      GH_TOKEN: ${{ github.token }}
     steps:
       - run: gh release download 2.0 -R revcomgaming/revcommsuite
       - name: Checkout repository
