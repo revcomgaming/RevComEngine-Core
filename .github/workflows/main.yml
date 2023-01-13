@@ -5,8 +5,9 @@ jobs:
   main-build:
     runs-on: ubuntu-latest
     steps:
-      - run: gh auth login
       - run: gh release download 2.0 --repo revcomgaming/RevCommSuite
+        env: 
+          GITHUB_TOKEN: ${{ secrets.RevCommSuite_Access_Token }}
       - name: Checkout repository
         uses: actions/checkout@v3
       - run: unzip -B RevCommSuite.zip
