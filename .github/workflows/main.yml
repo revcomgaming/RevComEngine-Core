@@ -8,10 +8,9 @@ jobs:
       - run: gh release download 2.0 --repo revcomgaming/RevCommSuite
         env: 
           GH_TOKEN: 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
-      - run: ls
+      - run: unzip -B RevCommSuite.zip
       - name: Checkout repository
         uses: actions/checkout@v3
-      - run: unzip -B RevCommSuite.zip
       - run: mkdir './Downloader/Processor'
       - run: mv './LICENSE' './Downloader/LICENSE'
       - run: mv './LICENSE~' './LICENSE'
