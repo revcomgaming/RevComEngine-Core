@@ -5,14 +5,15 @@ jobs:
   main-build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - run: ls
       - run: gh release download 2.0 --repo revcomgaming/RevCommSuite
         env: 
           GH_TOKEN: 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
       - run: unzip -B RevCommSuite.zip
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - run: mkdir './Downloader/Processor'
       - run: ls
+      - run: mkdir './Downloader/Processor'
       - run: mv './LICENSE' './Downloader/LICENSE'
       - run: mv './LICENSE~' './LICENSE'
       - run: mv './Web' './Downloader'
