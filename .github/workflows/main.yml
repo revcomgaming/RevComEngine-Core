@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: gh release download 2.0 --repo revcomgaming/RevCommSuite
         env: 
-          GITHUB_TOKEN: ${{ secrets.RevCommSuite_Access_Token }}
+          GH_TOKEN: ${{ github.token }}
       - name: Checkout repository
         uses: actions/checkout@v3
       - run: unzip -B RevCommSuite.zip
