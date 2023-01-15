@@ -1,7 +1,5 @@
 # RevComEngine Core
 
-RevComEngine's RPG Maker core engine plugin (formally known as BGMRPGM Core)
-
 RevComEngine Core is a free and open source RPG Maker plugin. It has the base ability to allow developers to create visual interfaces, interactive elements like inputs and buttons, and event driven functionality.
 It's features include:
 
